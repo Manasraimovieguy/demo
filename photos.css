@@ -1,0 +1,18 @@
+/* Here we are resizing images to look like 3 images per row that are evenly spaced
+With 30% width we get 3 images per row (totalling to 90%) and to evenly space them we consider the margin to both the left and right of each image
+Counting the numbers that is 2 (left and right) per image, totalling to 6, since we have 10% width remaining we divide that by 6
+and put that number as our margin for each image */
+img {
+    width: 30%;
+    margin: calc(10%/6);
+}
+
+nav {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    border-bottom: 2px solid #f1f1f1;
+    width: 30%;
+    margin: calc(10%/6);
+    padding: 1.2em 0;
+}

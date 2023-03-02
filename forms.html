@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Forms Demo</h1>
+    <form action="/tacos">
+        <p>
+            <label for="username">Enter a username:</label>
+            <input type="text" placeholder="username" id="username" name="username">
+        </p>
+        <p>
+            <label for="password">Enter a password:</label>
+            <input type="password" placeholder="password" id="password" name="password">
+        </p>
+        <p>
+            <label for="color">Enter a color:</label>
+            <input type="color" id="color" name="color">
+        </p>
+        <p>
+            <label for="number">Enter a number:</label>
+            <input type="number" placeholder="enter a number" id="number" name="number">
+        </p>
+        <!-- By including type below, clicking Submit will not take you anywhere -->
+        <button type="button">Submit (won't take you anywhere)</button>
+        <!-- By not including type below, clicking Submit will take you to where the form action attribute is designated to -->
+        <button>Submit (error)</button>
+        <!-- Another way to create a button is using the input element -->
+        <input type="submit" value="Click Me">
+    </form>
+    <!-- Buttons outside the form will not take you anywhere either -->
+    <button type="button">Submit (outside form)</button>
+    <h2>Hijacking Searches</h2>
+    <!-- Here is a fun one, now we create a button to search for results in reddit -->
+    <h3>Hijacking Reddit</h3>
+    <form action="https://www.reddit.com/search">
+        <label for="search">Search Reddit</label>
+        <!-- notice how our 'name' attribute needs to be mentioned as 'q' in order to match the search result URL standard of reddit-->
+        <input type="text" placeholder="Enter text" id="search" name="q">
+        <!-- Our button will direct us to the results of our Reddit Search based on text we entered -->
+        <button>Search</button>
+    </form>
+    <h3>Hijacking Google</h3>
+    <form action="https://www.google.com/search">
+        <label for="search">Search Google</label>
+        <!-- notice how our 'name' attribute needs to be mentioned as 'q' in order to match the search result URL standard of google-->
+        <input type="text" placeholder="Enter text" id="search" name="q">
+        <!-- Our button will direct us to the results of our Reddit Search based on text we entered -->
+        <button>Search</button>
+    </form>
+    <h3>Hijacking Youtube</h3>
+    <form action="https://www.youtube.com/results">
+        <label for="search">Search YouTube</label>
+        <!-- notice how our 'name' attribute needs to be mentioned as 'search_query' in order to match the search result URL standard of youtube-->
+        <input type="text" placeholder="Enter text" id="search" name="search_query">
+        <!-- Our button will direct us to the results of our Reddit Search based on text we entered -->
+        <button>Search</button>
+    </form>
+
+    <h2>More Inputs!</h2>
+    <form action="/birds">
+        <!-- Checkbox example -->
+        <!-- <input type="checkbox" name="agree_tos" id="agree" checked> if you want to have the checkbox ticked by default as page is opened -->
+        <input type="checkbox" name="agree_tos" id="agree">
+        <label for="agree">I agree to everything</label>
+        <!-- Radio Buttons Example -->
+        <p>
+            <input type="radio" name="size" id="xl" value="xl">
+            <label for="xl">XL</label>
+            <input type="radio" name="size" id="l" value="l">
+            <label for="l">L</label>
+            <input type="radio" name="size" id="m" value="m">
+            <label for="m">M</label>
+        </p>
+        <p>
+            <label for="meal">Please select you Entree</label>
+            <select name="meal" id="meal">
+                <option value="">Please choose an option</option>
+                <option value="veg">Vegetarian</option>
+                <!-- <option value="nonveg" selected>Non-Vegetarian</option> if you want a specific option pre-selected -->
+                <option value="nonveg">Non-Vegetarian</option>
+                <option value="seafood">Sea Food</option>
+            </select>
+        </p>
+        <p>
+            <label for="cheese">Enter cheese slices</label>
+            <input type="range" min="1" max="10" id="cheese" name="cheese_slices">
+
+        </p>
+        <p>
+            <label for="request">Any special requests</label>
+        <p><textarea id="request" rows="10" cols="40" placeholder="Type something here" name="Requests?"></textarea></p>
+        </p>
+        <button>Submit Final</button>
+    </form>
+    <h2>Validations Demo</h2>
+    <form action="/dummy">
+        <label for="first">First Name</label>
+        <input type="text" id="first" name="first" required>
+        <p>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required minlength="3" maxlength="20">
+        </p>
+        <button>Submit</button>
+    </form>
+</body>
+
+</html>
