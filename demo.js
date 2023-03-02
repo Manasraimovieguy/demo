@@ -1,4 +1,5 @@
 class AntraMath {
+
     constructor(value) {
         this.value = value;
     }
